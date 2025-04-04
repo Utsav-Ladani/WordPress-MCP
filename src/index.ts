@@ -5,7 +5,7 @@ import { Implementation } from "@modelcontextprotocol/sdk/types.js";
 import * as CreatePost from "./tools/create-post.js";
 import * as BlockTypesSchema from "./tools/block-types-schema.js";
 import * as UpdatePost from "./tools/update-post.js";
-import * as SearchPost from "./tools/search-post.js";
+import * as SearchPosts from "./tools/search-posts.js";
 import * as GetPost from "./tools/get-post.js";
 import { config } from "dotenv";
 
@@ -26,10 +26,10 @@ const serverOptions: ServerOptions = {
 const wordpressMCPServer = new McpServer(serverInfo, serverOptions)
 
 wordpressMCPServer.tool(
-    SearchPost.name,
-    SearchPost.description,
-    SearchPost.paramsSchema,
-    SearchPost.callback,
+    SearchPosts.name,
+    SearchPosts.description,
+    SearchPosts.paramsSchema,
+    SearchPosts.callback,
 );
 
 wordpressMCPServer.tool(
