@@ -1,7 +1,7 @@
 {
   "name": "wordpress-mcp",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "A Model Context Protocol server for WordPress",
   "main": "index.js",
   "type": "module",
   "bin": "./build/index.js",
@@ -14,6 +14,7 @@
     "build"
   ],
   "keywords": [
+    "wordpress-mcp",
     "wordpress",
     "mcp",
     "modelcontextprotocol"

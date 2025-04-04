@@ -16,43 +16,32 @@ https://github.com/user-attachments/assets/6ec184c3-ba41-4699-a13a-0402e1a16ce4
 
 ## 📦 Installation
 
-1. Install dependencies:
-   ```bash
-   pnpm install
-   ```
+Add following configuration to your `claude_desktop_config.json` file to use this MCP server:
 
-2. Build the server:
-   ```bash
-   pnpm run build
-   ```
+```json
+{
+  "mcpServers": {
+    "wordpress": {
+      "command": "npx",
+      "args": ["-y", "wordpress-mcp"],
+      "env": {
+        "WORDPRESS_HOST_URL": "http://localhost:<PORT>",
+        "WORDPRESS_API_USERNAME": "<WORDPRESS_USERNAME>",
+        "WORDPRESS_API_PASSWORD": "<WORDPRESS_APPLICATION_PASSWORD>",
+        "WORDPRESS_POST_AUTHOR_ID": "<WORDPRESS_POST_AUTHOR_ID>"
+      }
+    }
+  }
+}
+```
 
-3. Add Claude MCP server configuration:
-
-   Follow `Testing your server with Claude for Desktop` section in [MCP Server Example Documentation](https://modelcontextprotocol.io/quickstart/server)
-
-   Your `claude_desktop_config.json` should look like this:
-   ```json
-   {
-     "mcpServers": {
-       "wordpress": {
-         "command": "node",
-         "args": ["<PATH_TO_PROJECT_FOLDER>/build/index.js"],
-         "env": {
-           "WORDPRESS_HOST_URL": "http://localhost:<PORT>",
-           "WORDPRESS_API_USERNAME": "<WORDPRESS_USERNAME>",
-           "WORDPRESS_API_PASSWORD": "<WORDPRESS_APPLICATION_PASSWORD>",
-           "WORDPRESS_POST_AUTHOR_ID": "<WORDPRESS_POST_AUTHOR_ID>"
-         }
-       }
-     }
-   }
-   ```
+Check `Testing your server with Claude for Desktop` section in [MCP Server Example Documentation](https://modelcontextprotocol.io/quickstart/server) for more details.
 
 ## 📝 Available Tools
 
 - `createPost`: Create a new WordPress post
 - `updatePost`: Update an existing post
-- `searchPost`: Search for posts
+- `searchPosts`: Search for posts by title or keyword
 - `getPost`: Get a specific post
 - `blockTypesSchema`: Get WordPress block types schema
 
