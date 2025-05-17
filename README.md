@@ -1,5 +1,8 @@
 # WordPress MCP
 
+[![npm version](https://img.shields.io/npm/v/wordpress-mcp.svg)](https://www.npmjs.com/package/wordpress-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/wordpress-mcp.svg)](https://www.npmjs.com/package/wordpress-mcp)
+
 A Model Context Protocol server for WordPress content management. It has ability to create, update, search and get posts. It also has ability to get WordPress block types schema to generate post content using blocks.
 
 ## 📺 Demo
